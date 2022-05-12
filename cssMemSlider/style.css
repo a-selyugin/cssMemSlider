@@ -1,6 +1,8 @@
 
 body{
-  background-color: steelblue;
+  background-color: rgb(43, 43, 43);
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .page-container{
@@ -45,10 +47,35 @@ img{
 
 .selectors{
   width: 100%;
-  align-self: center;
+  display: flex;
+  justify-content: center;
 }
 
+.selectors > input {
+  display: none;
+}
 
+.selectors > label {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.3rem;
+  border: 1px solid pink;
+}
+
+.selectors > label:hover .fake-button{
+  background-color: white;
+  border-color: white;
+}
+
+.fake-button{
+  margin: auto;
+  width: 1.7rem;
+  height: 1.7rem;
+  border: 0.2rem solid skyblue;
+  background-color: skyblue;
+  border-radius: 50%;
+}
 
 .meme-text-scroller{
   overflow: scroll;
