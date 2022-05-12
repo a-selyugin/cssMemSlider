@@ -51,7 +51,7 @@ img{
   justify-content: center;
 }
 
-.selectors > input {
+.slider-container > input {
   display: none;
 }
 
@@ -86,4 +86,24 @@ img{
   justify-items: center;
   width: 500%;
   border: solid #48df1a 0.1rem;
+}
+
+#meme1:checked ~ .selectors > label > ._fb-1{
+  background-color: transparent;
+}
+
+#meme2:checked ~ .selectors > label > ._fb-2{
+  background-color: transparent;
+}
+
+#meme3:checked ~ .selectors > label > ._fb-3{
+  background-color: transparent;
+}
+
+#meme4:checked ~ .selectors > label > ._fb-4{
+  background-color: transparent;
+}
+
+#meme5:checked ~ .selectors > label > ._fb-5{
+  background-color: transparent;
 }
