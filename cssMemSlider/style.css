@@ -1,6 +1,6 @@
 
 body{
-  background-color: rgb(43, 43, 43);
+  background-color: rgb(80, 79, 79);
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -8,7 +8,7 @@ body{
 
 .page-container{
   margin: 0 auto;
-  width: 90vw;
+  width: 95vw;
   display: flex;
   justify-content: center;
 }
@@ -18,7 +18,7 @@ body{
   width: 90%;
   height: 90vh;
   display: grid;
-  grid-template-rows: 65vh 5vh 15vh;
+  grid-template-rows: minmax(15vh 65vh) minmax(2vh 5vh) minmax(3vh 15vh);
   gap: 5vh;
 }
 
@@ -31,18 +31,17 @@ body{
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   width: 500%;
-  border: solid #dfdf1a 0.1rem;
   transition: 0.5s;
 }
 
 .meme{
-  height: 65vh;
-  width: 95%;
+  max-height: 64vh;
+  max-width: 95%;
   align-self: center;
   display: block;
-  max-height: 100%;
-  max-width: 100%;
   object-fit: contain;
+  border-radius: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(2, 2, 2, 0.5);
 }
 
 .selectors{
@@ -84,7 +83,6 @@ body{
   grid-template-columns: repeat(5, 1fr);
   justify-items: flex-start;
   width: 500%;
-  border: solid #48df1a 0.1rem;
   transition: 0.5s;
 }
 
