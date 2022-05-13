@@ -36,15 +36,13 @@ body{
 }
 
 .meme{
-  height: fit-content;
-  block-size: fit-content;
-  height: 64vh;
-  align-content: center;
-}
-
-img{
+  height: 65vh;
+  width: 95%;
+  align-self: center;
+  display: block;
   max-height: 100%;
   max-width: 100%;
+  object-fit: contain;
 }
 
 .selectors{
@@ -59,8 +57,8 @@ img{
 
 .selectors > label {
   cursor: pointer;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0.3rem;
 }
 
@@ -71,8 +69,8 @@ img{
 
 .fake-button{
   margin: auto;
-  width: 1.7rem;
-  height: 1.7rem;
+  width: 1rem;
+  height: 1rem;
   border: 0.2rem solid skyblue;
   background-color: skyblue;
   border-radius: 50%;
