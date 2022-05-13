@@ -1,4 +1,7 @@
-
+p, body, input, img, div, section{
+  margin: 0;
+  padding: 0;
+}
 body{
   background-color: rgb(80, 79, 79);
   color: white;
@@ -7,6 +10,7 @@ body{
 }
 
 .page-container{
+  padding: 5vh 0;
   margin: 0 auto;
   width: 95vw;
   display: flex;
@@ -16,14 +20,15 @@ body{
 .slider-container{
   overflow: hidden;
   width: 90%;
-  height: 90vh;
+  max-height: 90vh;
   display: grid;
-  grid-template-rows: minmax(15vh 65vh) minmax(2vh 5vh) minmax(3vh 15vh);
-  gap: 5vh;
+  grid-template-rows: auto 1fr;
+  gap: 3vh 0;
 }
 
 .memes-slider-scroller{
   overflow: hidden;
+  padding: 1vh 0;
 }
 
 .meme-slider-content{
@@ -35,10 +40,10 @@ body{
 }
 
 .meme{
-  max-height: 64vh;
-  max-width: 95%;
-  align-self: center;
   display: block;
+  max-width: 95%;
+  max-height: 60vh;
+  align-self: center;
   object-fit: contain;
   border-radius: 1rem;
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(2, 2, 2, 0.5);
@@ -46,6 +51,7 @@ body{
 
 .selectors{
   width: 100%;
+  max-height: 10vh;
   display: flex;
   justify-content: center;
 }
@@ -84,6 +90,10 @@ body{
   justify-items: flex-start;
   width: 500%;
   transition: 0.5s;
+}
+
+.meme-text{
+ padding: 0 2.5%;
 }
 
 #meme1:checked ~ .selectors > label > ._fb-1{
@@ -136,16 +146,16 @@ body{
   margin-left: -400%;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .slider-container{
     grid-template-areas:  "meme meme meme meme meme"
                           "text text text nav nav";
-    grid-template-rows: 75vh 20vh;
+    grid-template-rows: 75vh 15vh;
     grid-template-columns: repeat(5, 1fr);
   }
 
   .meme{
-    height: 74vh;
+    max-height: 73vh;
   }
 
   .memes-slider-scroller{
@@ -172,5 +182,8 @@ body{
     width: 0.5rem;
     height: 0.5rem;
     border: 0.1rem solid skyblue;
+  }
+  .meme-text{
+    padding: 0 4.2%;
   }
 }
