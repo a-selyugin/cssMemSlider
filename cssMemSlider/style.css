@@ -3,7 +3,8 @@ p, body, input, img, div, section{
   padding: 0;
 }
 body{
-  background-color: rgb(80, 79, 79);
+  background-image: linear-gradient(to right, indigo,violet);
+  background-size: cover;
   color: white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1rem;
@@ -37,7 +38,7 @@ body{
 
 .meme{
   display: block;
-  max-width: 95%;
+  max-width: 98%;
   max-height: 70vh;
   align-self: center;
   border-radius: 1rem;
@@ -68,16 +69,16 @@ body{
 }
 
 .selectors > label:active .fake-button{
-  background-color: blue;
-  border-color: blue;
+  background-color: gray;
+  border-color: gray;
 }
 
 .fake-button{
   margin: auto;
   width: 1rem;
   height: 1rem;
-  border: 0.2rem solid skyblue;
-  background-color: skyblue;
+  border: 0.2rem solid #A2E374;
+  background-color: #A2E374;
   border-radius: 50%;
 }
 
@@ -90,10 +91,6 @@ body{
   justify-items: center;
   width: 500%;
   transition: 0.5s;
-}
-
-.meme-text{
- padding: 0 2.5%;
 }
 
 #meme1:checked ~ .selectors > label > ._fb-1{
@@ -150,7 +147,7 @@ body{
   .slider-container{
     grid-template-areas:  "meme meme"
                           "text nav";
-    grid-template-rows: 72vh 10vh;
+    grid-template-rows: 9fr 1fr;
     grid-template-columns: 4fr 1fr;
   }
 
@@ -182,7 +179,7 @@ body{
     margin: auto;
     width: 0.5rem;
     height: 0.5rem;
-    border: 0.1rem solid skyblue;
+    border: 0.1rem solid #A2E374;
   }
 
   .meme-text-content{
@@ -190,6 +187,6 @@ body{
   }
 
   .meme-text{
-    padding: 0 3.125%;
+    padding: 0 1.25%;
   }
 }
