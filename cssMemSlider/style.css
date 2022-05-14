@@ -18,8 +18,7 @@ body{
 }
 
 .slider-container{
-  overflow: hidden;
-  width: 90%;
+  max-width: 50rem;
   max-height: 90vh;
   display: grid;
   grid-template-rows: auto 1fr;
@@ -70,6 +69,11 @@ body{
 .selectors > label:hover .fake-button{
   background-color: white;
   border-color: white;
+}
+
+.selectors > label:active .fake-button{
+  background-color: blue;
+  border-color: blue;
 }
 
 .fake-button{
@@ -148,10 +152,10 @@ body{
 
 @media (min-width: 768px) {
   .slider-container{
-    grid-template-areas:  "meme meme meme meme meme"
-                          "text text text nav nav";
+    grid-template-areas:  "meme meme"
+                          "text nav";
     grid-template-rows: 75vh 15vh;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 4fr 1fr;
   }
 
   .meme{
@@ -168,7 +172,7 @@ body{
 
   .selectors{
     grid-area: nav;
-    justify-content: flex-end;
+    justify-content: end;
   }
 
   .selectors > label {
@@ -184,6 +188,6 @@ body{
     border: 0.1rem solid skyblue;
   }
   .meme-text{
-    padding: 0 4.2%;
+    padding: 0 3.125%;
   }
 }
