@@ -11,15 +11,12 @@ body{
 
 .page-container{
   padding: 5vh 0;
-  margin: 0 auto;
-  width: 95vw;
   display: flex;
   justify-content: center;
 }
 
 .slider-container{
-  max-width: 50rem;
-  max-height: 90vh;
+  max-width: 30rem;
   display: grid;
   grid-template-rows: auto 1fr;
   gap: 3vh 0;
@@ -41,9 +38,8 @@ body{
 .meme{
   display: block;
   max-width: 95%;
-  max-height: 60vh;
+  max-height: 70vh;
   align-self: center;
-  object-fit: contain;
   border-radius: 1rem;
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(2, 2, 2, 0.5);
 }
@@ -91,7 +87,7 @@ body{
 .meme-text-content{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  justify-items: flex-start;
+  justify-items: center;
   width: 500%;
   transition: 0.5s;
 }
@@ -154,12 +150,13 @@ body{
   .slider-container{
     grid-template-areas:  "meme meme"
                           "text nav";
-    grid-template-rows: 75vh 15vh;
+    grid-template-rows: 72vh 10vh;
     grid-template-columns: 4fr 1fr;
   }
 
   .meme{
-    max-height: 73vh;
+    max-height: 70vh;
+    object-fit: fill;
   }
 
   .memes-slider-scroller{
@@ -187,6 +184,11 @@ body{
     height: 0.5rem;
     border: 0.1rem solid skyblue;
   }
+
+  .meme-text-content{
+    justify-items: flex-start;
+  }
+
   .meme-text{
     padding: 0 3.125%;
   }
